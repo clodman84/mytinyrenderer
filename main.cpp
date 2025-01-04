@@ -1,4 +1,6 @@
+#include "geometry.h"
 #include "tgaimage.h"
+#include "model.h"
 #include <utility>
 #include <cmath>
 
@@ -39,10 +41,20 @@ void line(int x0, int y0, int x1, int y1, TGAColor colour, TGAImage *image){
 }
 
 int main(int argc, char** argv) {
-        TGAImage image(100, 100, TGAImage::RGB);
-        for (int y = 0; y <=50; y++){
-                int x = std::sqrt(2500 - y*y);
-                line(50 - x, 50 + y, 50 + x, 50 + y, red, &image);
+        int width = 500, height = 500;
+        TGAImage image(width, height, TGAImage::RGB);
+        Model monke("./suzanne.obj");
+        for (int i=0; i < monke.nfaces(); i++) {
+                std::vector<int> face = monke.face(i);
+                for (int j=0; j < 3; j++){
+                        Vec3 v0 = monke.vert(face[j]);
+                        Vec3 v1 = monke.vert(face[(j+1)%3]);
+                        int x0 = (v0.x+1.)*width/2.; 
+                        int y0 = (v0.y+1.)*height/2.; 
+                        int x1 = (v1.x+1.)*width/2.; 
+                        int y1 = (v1.y+1.)*height/2.; 
+                        line(x0, y0, x1, y1, white, &image);
+                }
         }
         image.write_tga_file("output.tga");
         return 0;
