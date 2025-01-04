@@ -44,12 +44,12 @@ int main(int argc, char** argv) {
         int width = 500, height = 500;
         TGAImage image(width, height, TGAImage::RGB);
         Model monke("./suzanne.obj");
-        Vec3 camera{0, 0, 1};
+        Vec3 camera{0, 0, 500};
         for (int i=0; i < monke.nfaces(); i++) {
                 std::vector<int> face = monke.face(i);
                 // deciding if it should be drawn or not
                 Vec3 normal = (monke.vert(face[1]) - monke.vert(face[0])) ^ (monke.vert(face[2]) - monke.vert(face[0]));
-                if (camera*normal > 0) continue;
+                if ((monke.vert(face[0])-camera)*normal > 0) continue;
                 for (int j=0; j < 3; j++){
                         Vec3 v0 = monke.vert(face[j]);
                         Vec3 v1 = monke.vert(face[(j+1)%3]);
