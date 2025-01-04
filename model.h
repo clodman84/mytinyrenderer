@@ -18,6 +18,7 @@ public:
 	int nfaces();
 	// ways to access a vertex by index
 	Vec3 vert(int i);
+	Vec3 vert_normals(int i);
 	// ways to access a face by index
 	std::vector<int> face(int idx);
 };

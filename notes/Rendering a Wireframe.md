@@ -159,4 +159,36 @@ Suzanne is upside down, but that is because while .obj uses coordinates that are
 
 Moreover, since we are completely ignoring the z value of the vector we are effectively looking at a shadow of Suzanne (orthographic projection) that is cast from a light source at infinity, which isn't how our eyes perceive things and it is also why any amateur artist will scoff at you if you draw cubes with all sides of equal length (if theyre an asshole that is).
 
+Moreover the image looks funky as hell, there are clearly too many lines and we are rendering too much of the scene, we can make this better by discarding the faces that are pointing away from the camera.
 
+ssloy/tinyrenderer uses z-buffers in the next few lessons, but I am not there yet and I want to use simple normal vector based culling right now and look at Suzanne in all her glory.
+
+The idea is to find a normal vector of the triangle, and then the dot product with the camera vector should be positive is the normal is lying along it
+
+```
+int main(int argc, char** argv) {
+        int width = 500, height = 500;
+        TGAImage image(width, height, TGAImage::RGB);
+        Model monke("./suzanne.obj");
+        Vec3 camera{0, 0, 1};
+        for (int i=0; i < monke.nfaces(); i++) {
+                std::vector<int> face = monke.face(i);
+                // deciding if it should be drawn or not
+                Vec3 normal = (monke.vert(face[1]![[Suzanne1.jpeg]]) - monke.vert(face[0])) ^ (monke.vert(face[2]) - monke.vert(face[0]));
+                if (camera*normal > 0) continue;
+                for (int j=0; j < 3; j++){
+                        Vec3 v0 = monke.vert(face[j]);
+                        Vec3 v1 = monke.vert(face[(j+1)%3]);
+                        int x0 = (v0.x+1.)*width/2.; 
+                        int y0 = (v0.y+1.)*height/2.; 
+                        int x1 = (v1.x+1.)*width/2.; 
+                        int y1 = (v1.y+1.)*height/2.; 
+                        line(x0, y0, x1, y1, white, &image);
+                }
+        }
+        image.write_tga_file("output.tga");
+        return 0;
+}
+```
+
+![suzaaaaannneeee](<Suzanne1.jpeg>)
