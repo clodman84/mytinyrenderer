@@ -175,7 +175,7 @@ int main(int argc, char** argv) {
                 std::vector<int> face = monke.face(i);
                 // deciding if it should be drawn or not
                 Vec3 normal = (monke.vert(face[1]![[Suzanne1.jpeg]]) - monke.vert(face[0])) ^ (monke.vert(face[2]) - monke.vert(face[0]));
-                if (camera*normal < 0) continue;
+                if (camera*normal >= 0) continue;
                 for (int j=0; j < 3; j++){
                         Vec3 v0 = monke.vert(face[j]);
                         Vec3 v1 = monke.vert(face[(j+1)%3]);
@@ -191,4 +191,4 @@ int main(int argc, char** argv) {
 }
 ```
 
-![suzaaaaannneeee](<Suzanne1.jpeg>)
+![suzaaaaannneeee](<Suzanne1.png>)
