@@ -1,5 +1,3 @@
-#computer-graphics
-
 Anything following a hash character (#) is a comment.
 
 An OBJ file may contain vertex data, free-form curve/surface attributes, elements, free-form curve/surface body statements, connectivity between free-form surfaces, grouping and display/render attribute information. The most common elements are geometric vertices, texture coordinates, vertex normals and polygonal faces:

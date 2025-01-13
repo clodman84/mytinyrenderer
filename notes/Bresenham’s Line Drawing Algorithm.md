@@ -1,8 +1,8 @@
-![alt text](<Pasted image 20241231184039.png>)
+![alt text](<pics/Pasted image 20241231184039.png>)
 The Bresenham algorithm is specifically designed to work on lines that go downwards (technically its still upwards its just that the way pixel indexing on displays work) with a slope less than 1. This may seem pretty limiting at first but we will extend this method to draw lines at any angle.
 ## Derivation
 
-![alt](<Pasted image 20241231185348.png>)
+![alt](<pics/Pasted image 20241231185348.png>)
 
 Lets start at $(x_0, y_0)$ such that $f(x_0, y_0) = 0$ and since A, B and C are all integers in the line equation of our choice (they are calculated using start and end point using slopes and so on, you get the idea), so is $x_0$ and $y_0$ and is represented by the yellow dot. The intersection of the integral grid lines represent the pixels on the screen.
 
@@ -71,7 +71,7 @@ $$
 Which evaluates to $-\Delta y - \Delta x$
 ## Extending it to any angle
 
-![alt ](<Pasted image 20250101152019.png>)
+![alt ](<pics/Pasted image 20250101152019.png>)
 
 Right now the algorithm only works in octant 1 (the diagram is using regular coordinates instead of the upside coordinate system on screens)
 
@@ -98,7 +98,7 @@ plotLine(x0, y0, x1, y1)
         D = D + 2*dy
 ```
 
-![](<Pasted image 20250101160933.png>)
+![](<pics/Pasted image 20250101160933.png>)
 
 Now we have octant 1 and 2 done, what about octant 5 and 6. The above diagram shows us whats different between the two quadrants. Notice that the only difference in octant 5 and 6 is the direction in which our lines are being drawn, if we just swap the points whenever $x_0 > x_1$ we get what we are looking for. Should we be doing this after or before the swap in case the slope is greater than 1? We should be doing this after we decide to swap variables for greater slopes. Because what we are doing right now is changing the order of the variables we are meant to be looping over, and the the swap for the loops is deciding *which* variable *x or y* we need to be looping over.
 
@@ -141,7 +141,7 @@ plotLine(x0, y0, x1, y1)
     dx = x1 - x0
     dy = y1 - y0
     yi = 1
-    if dy < 0:
+    if dy <pics/ 0:
 	    yi = -1
 	    dy = -dy
     D = 2*dy - dx

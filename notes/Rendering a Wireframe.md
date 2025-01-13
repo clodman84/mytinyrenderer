@@ -128,7 +128,7 @@ Now we have a way to read wireframes.
 
 ## Rendering
 
-![alt](<Suzanne.jpeg>)
+![alt](<pics/Suzanne.jpeg>)
 
 ```
 
@@ -191,4 +191,4 @@ int main(int argc, char** argv) {
 }
 ```
 
-![suzaaaaannneeee](<Suzanne1.png>)
+![suzaaaaannneeee](<pics/Suzanne1.png>)
