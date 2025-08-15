@@ -1,196 +1,32 @@
 [
   {
     "arguments": [
-      "/usr/sbin/gcc",
-      "-DDEBUG",
-      "-DPLATFORM_DESKTOP",
-      "-DGRAPHICS_API_OPENGL_33",
-      "-D_GLFW_X11",
-      "-D_GNU_SOURCE",
-      "-I../external/raylib-master/src",
-      "-I../external/raylib-master/src/external/glfw/include",
-      "-m64",
-      "-g",
+      "/usr/sbin/g++",
+      "-Wall",
+      "-std=c++17",
+      "-Iinclude",
       "-c",
       "-o",
-      "obj/x64/Debug/raylib/raudio.o",
-      "../external/raylib-master/src/raudio.c"
+      "bin/obj/game.o",
+      "src/game.cpp"
     ],
-    "directory": "/home/clodman84/Documents/Programming/mytinyrenderer/build/build_files",
-    "file": "/home/clodman84/Documents/Programming/mytinyrenderer/build/external/raylib-master/src/raudio.c",
-    "output": "/home/clodman84/Documents/Programming/mytinyrenderer/build/build_files/obj/x64/Debug/raylib/raudio.o"
-  },
-  {
-    "arguments": [
-      "/usr/sbin/gcc",
-      "-DDEBUG",
-      "-DPLATFORM_DESKTOP",
-      "-DGRAPHICS_API_OPENGL_33",
-      "-D_GLFW_X11",
-      "-D_GNU_SOURCE",
-      "-I../external/raylib-master/src",
-      "-I../external/raylib-master/src/external/glfw/include",
-      "-m64",
-      "-g",
-      "-c",
-      "-o",
-      "obj/x64/Debug/raylib/rcore.o",
-      "../external/raylib-master/src/rcore.c"
-    ],
-    "directory": "/home/clodman84/Documents/Programming/mytinyrenderer/build/build_files",
-    "file": "/home/clodman84/Documents/Programming/mytinyrenderer/build/external/raylib-master/src/rcore.c",
-    "output": "/home/clodman84/Documents/Programming/mytinyrenderer/build/build_files/obj/x64/Debug/raylib/rcore.o"
-  },
-  {
-    "arguments": [
-      "/usr/sbin/gcc",
-      "-DDEBUG",
-      "-DPLATFORM_DESKTOP",
-      "-DGRAPHICS_API_OPENGL_33",
-      "-D_GLFW_X11",
-      "-D_GNU_SOURCE",
-      "-I../external/raylib-master/src",
-      "-I../external/raylib-master/src/external/glfw/include",
-      "-m64",
-      "-g",
-      "-c",
-      "-o",
-      "obj/x64/Debug/raylib/rglfw.o",
-      "../external/raylib-master/src/rglfw.c"
-    ],
-    "directory": "/home/clodman84/Documents/Programming/mytinyrenderer/build/build_files",
-    "file": "/home/clodman84/Documents/Programming/mytinyrenderer/build/external/raylib-master/src/rglfw.c",
-    "output": "/home/clodman84/Documents/Programming/mytinyrenderer/build/build_files/obj/x64/Debug/raylib/rglfw.o"
-  },
-  {
-    "arguments": [
-      "/usr/sbin/gcc",
-      "-DDEBUG",
-      "-DPLATFORM_DESKTOP",
-      "-DGRAPHICS_API_OPENGL_33",
-      "-D_GLFW_X11",
-      "-D_GNU_SOURCE",
-      "-I../external/raylib-master/src",
-      "-I../external/raylib-master/src/external/glfw/include",
-      "-m64",
-      "-g",
-      "-c",
-      "-o",
-      "obj/x64/Debug/raylib/rmodels.o",
-      "../external/raylib-master/src/rmodels.c"
-    ],
-    "directory": "/home/clodman84/Documents/Programming/mytinyrenderer/build/build_files",
-    "file": "/home/clodman84/Documents/Programming/mytinyrenderer/build/external/raylib-master/src/rmodels.c",
-    "output": "/home/clodman84/Documents/Programming/mytinyrenderer/build/build_files/obj/x64/Debug/raylib/rmodels.o"
-  },
-  {
-    "arguments": [
-      "/usr/sbin/gcc",
-      "-DDEBUG",
-      "-DPLATFORM_DESKTOP",
-      "-DGRAPHICS_API_OPENGL_33",
-      "-D_GLFW_X11",
-      "-D_GNU_SOURCE",
-      "-I../external/raylib-master/src",
-      "-I../external/raylib-master/src/external/glfw/include",
-      "-m64",
-      "-g",
-      "-c",
-      "-o",
-      "obj/x64/Debug/raylib/rshapes.o",
-      "../external/raylib-master/src/rshapes.c"
-    ],
-    "directory": "/home/clodman84/Documents/Programming/mytinyrenderer/build/build_files",
-    "file": "/home/clodman84/Documents/Programming/mytinyrenderer/build/external/raylib-master/src/rshapes.c",
-    "output": "/home/clodman84/Documents/Programming/mytinyrenderer/build/build_files/obj/x64/Debug/raylib/rshapes.o"
-  },
-  {
-    "arguments": [
-      "/usr/sbin/gcc",
-      "-DDEBUG",
-      "-DPLATFORM_DESKTOP",
-      "-DGRAPHICS_API_OPENGL_33",
-      "-D_GLFW_X11",
-      "-D_GNU_SOURCE",
-      "-I../external/raylib-master/src",
-      "-I../external/raylib-master/src/external/glfw/include",
-      "-m64",
-      "-g",
-      "-c",
-      "-o",
-      "obj/x64/Debug/raylib/rtext.o",
-      "../external/raylib-master/src/rtext.c"
-    ],
-    "directory": "/home/clodman84/Documents/Programming/mytinyrenderer/build/build_files",
-    "file": "/home/clodman84/Documents/Programming/mytinyrenderer/build/external/raylib-master/src/rtext.c",
-    "output": "/home/clodman84/Documents/Programming/mytinyrenderer/build/build_files/obj/x64/Debug/raylib/rtext.o"
-  },
-  {
-    "arguments": [
-      "/usr/sbin/gcc",
-      "-DDEBUG",
-      "-DPLATFORM_DESKTOP",
-      "-DGRAPHICS_API_OPENGL_33",
-      "-D_GLFW_X11",
-      "-D_GNU_SOURCE",
-      "-I../external/raylib-master/src",
-      "-I../external/raylib-master/src/external/glfw/include",
-      "-m64",
-      "-g",
-      "-c",
-      "-o",
-      "obj/x64/Debug/raylib/rtextures.o",
-      "../external/raylib-master/src/rtextures.c"
-    ],
-    "directory": "/home/clodman84/Documents/Programming/mytinyrenderer/build/build_files",
-    "file": "/home/clodman84/Documents/Programming/mytinyrenderer/build/external/raylib-master/src/rtextures.c",
-    "output": "/home/clodman84/Documents/Programming/mytinyrenderer/build/build_files/obj/x64/Debug/raylib/rtextures.o"
-  },
-  {
-    "arguments": [
-      "/usr/sbin/gcc",
-      "-DDEBUG",
-      "-DPLATFORM_DESKTOP",
-      "-DGRAPHICS_API_OPENGL_33",
-      "-D_GLFW_X11",
-      "-D_GNU_SOURCE",
-      "-I../external/raylib-master/src",
-      "-I../external/raylib-master/src/external/glfw/include",
-      "-m64",
-      "-g",
-      "-c",
-      "-o",
-      "obj/x64/Debug/raylib/utils.o",
-      "../external/raylib-master/src/utils.c"
-    ],
-    "directory": "/home/clodman84/Documents/Programming/mytinyrenderer/build/build_files",
-    "file": "/home/clodman84/Documents/Programming/mytinyrenderer/build/external/raylib-master/src/utils.c",
-    "output": "/home/clodman84/Documents/Programming/mytinyrenderer/build/build_files/obj/x64/Debug/raylib/utils.o"
+    "directory": "/home/clodman84/Documents/Programming/mytinyrenderer",
+    "file": "/home/clodman84/Documents/Programming/mytinyrenderer/src/game.cpp",
+    "output": "/home/clodman84/Documents/Programming/mytinyrenderer/bin/obj/game.o"
   },
   {
     "arguments": [
       "/usr/sbin/g++",
-      "-DDEBUG",
-      "-DPLATFORM_DESKTOP",
-      "-DGRAPHICS_API_OPENGL_33",
-      "-D_GLFW_X11",
-      "-D_GNU_SOURCE",
-      "-I../../src",
-      "-I../../include",
-      "-I../external/raylib-master/src",
-      "-I../external/raylib-master/src/external",
-      "-I../external/raylib-master/src/external/glfw/include",
-      "-m64",
-      "-Wshadow",
-      "-g",
+      "-Wall",
       "-std=c++17",
+      "-Iinclude",
       "-c",
       "-o",
-      "obj/x64/Debug/mytinyrenderer/main.o",
-      "../../src/main.cpp"
+      "bin/obj/main.o",
+      "src/main.cpp"
     ],
-    "directory": "/home/clodman84/Documents/Programming/mytinyrenderer/build/build_files",
+    "directory": "/home/clodman84/Documents/Programming/mytinyrenderer",
     "file": "/home/clodman84/Documents/Programming/mytinyrenderer/src/main.cpp",
-    "output": "/home/clodman84/Documents/Programming/mytinyrenderer/build/build_files/obj/x64/Debug/mytinyrenderer/main.o"
+    "output": "/home/clodman84/Documents/Programming/mytinyrenderer/bin/obj/main.o"
   }
 ]
